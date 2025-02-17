@@ -103,7 +103,7 @@ tar -xvzf hadoop-3.4.1.tar.gz
 ls
 
 # rename the folder to hadoop
-mv hadoop-3.3.6 hadoop
+mv hadoop-3.4.1 hadoop
 ```
 
 We need to specify `JAVA_HOME` in `~/hadoop/etc/hadoop/hadoop-env.sh`. To figure out where java's home is, run:
