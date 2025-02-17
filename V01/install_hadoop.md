@@ -53,13 +53,9 @@ The command `sudo adduser hadoop` will look like:
 
 ## Java
 
-I have already preinstalled the correct java version. In other words, you don't have to take care about the java version. For reference, I did:
+I have already preinstalled the correct java version. In other words, you don't have to take care about the java version.
 
-```bash
-sudo apt install openjdk-11-jdk
-```
-
-To verify that we have indeed the version `11.0.21`, run:
+To verify that we have indeed the version `17.0.14`, run:
 
 ```bash
 java --version
@@ -112,7 +108,7 @@ We need to specify `JAVA_HOME` in `~/hadoop/etc/hadoop/hadoop-env.sh`. To figure
 dirname $(dirname $(readlink -f $(which java)))
 ```
 
-and copy the output (`/usr/lib/jvm/java-11-openjdk-amd64`).
+and copy the output (`/usr/lib/jvm/java-17-openjdk-amd64`).
 
 ```text
 change the line from
@@ -122,7 +118,7 @@ change the line from
 to
 
 ```text
-export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 ```
 
 with
