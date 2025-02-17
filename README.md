@@ -1,4 +1,4 @@
-# Big Data Lab Cluster FS24
+# Big Data Lab Cluster FS25
 
 ```text
 ██╗    ██╗███████╗██╗      ██████╗ ██████╗ ███╗   ███╗███████╗
