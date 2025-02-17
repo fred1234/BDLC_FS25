@@ -2,9 +2,9 @@
 
 ## Unix Skills
 
-Throughout the module, we will use our virtual machine. If you don't feel comfortable to work with Unix, make sure to read this [tutorial](http://www.ee.surrey.ac.uk/Teaching/Unix/index.html) (Tutorial seven is not needed).
+Throughout the module, we will use our virtual machine. If you don't feel comfortable to work with Unix, make sure to read this [tutorial](https://www.math.utah.edu/lab/unix/unix-commands.html).
 
-You can try out the commands on your virtual machine. Just SSH into your machine with `ssh student@bdlc-XX.labservices.ch`, where `XX` is your personal virtual machine number.
+You can try out the commands on your virtual machine. Just SSH into your machine with `ssh labstudent@bdlc-XXX.bdlc.ls.eee.intern`, where `XXX` is your personal virtual machine number.
 
 Remember, you have root access, so don't blindly trust internet tutorials. Especially if commands need `sudo`.
 

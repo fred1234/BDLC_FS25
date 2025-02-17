@@ -6,7 +6,7 @@ We will use the official installation documentation from [Apache Hadoop](https:/
 
 ## SSH
 
-SSH into your machine with `ssh student@bdlc-XX.labservices.ch`, where `XX` is your personal virtual machine number.
+SSH into your machine with `ssh labstudent@bdlc-XXX.bdlc.ls.eee.intern`, where `XX` is your personal virtual machine number.
 
 ## Update and Upgrade your Software
 
@@ -20,7 +20,7 @@ sudo apt upgrade
 
 ## Hadoop User
 
-We will create a user `hadoop` and won't use our `student` account. All Hadoop processes will run under the user `hadoop`.
+We will create a user `hadoop` and won't use our `labstudent` account. All Hadoop processes will run under the user `hadoop`.
 
 ```bash
 # create a new user called 'hadoop'
@@ -32,7 +32,7 @@ sudo adduser hadoop
 The command `sudo adduser hadoop` will look like:
 
 ```bash
-# [sudo] password for student:
+# [sudo] password for labstudent:
 # Adding user `hadoop' ...
 # Adding new group `hadoop' (1004) ...
 # Adding new user `hadoop' (1004) with group `hadoop' ...
