@@ -90,14 +90,14 @@ whoami
 
 ```bash
 # download the latest hadoop distribution
-wget https://dlcdn.apache.org/hadoop/common/hadoop-3.3.6/hadoop-3.3.6.tar.gz
+wget wget https://dlcdn.apache.org/hadoop/common/hadoop-3.4.1/hadoop-3.4.1.tar.gz
 
 # check with ls that the file is around
-# you should see: hadoop-3.3.6.tar.gz
+# you should see: hadoop-3.4.1.tar.gz
 ls
 
-# extract hadoop-3.3.6.tar.gz
-tar -xvzf hadoop-3.3.6.tar.gz
+# extract hadoop-3.4.1.tar.gz
+tar -xvzf hadoop-3.4.1.tar.gz
 
 # check again with ls if you see the folder hadoop-3.3.6
 ls
@@ -157,7 +157,7 @@ mkdir ~/input
 cp ~/hadoop/etc/hadoop/*.xml ~/input
 ls -al ~/input
 
-~/hadoop/bin/hadoop jar ~/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.3.6.jar grep ~/input ~/output 'dfs[a-z.]+'
+~/hadoop/bin/hadoop jar ~/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.4.1.jar grep ~/input ~/output 'dfs[a-z.]+'
 ```
 
 Can you explain what the program does?
