@@ -86,7 +86,7 @@ whoami
 
 ```bash
 # download the latest hadoop distribution
-wget wget https://dlcdn.apache.org/hadoop/common/hadoop-3.4.1/hadoop-3.4.1.tar.gz
+wget https://dlcdn.apache.org/hadoop/common/hadoop-3.4.1/hadoop-3.4.1.tar.gz
 
 # check with ls that the file is around
 # you should see: hadoop-3.4.1.tar.gz
