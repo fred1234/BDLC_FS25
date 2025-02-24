@@ -23,7 +23,6 @@ This repository is used to provide additional resources for `BDLC_FS25`.
 └── v01_exercises.md    # exercises for this session
 ```
 
-<!--
 ## [V02](./V02/)
 
 - HDFS, YARN and MapReduce.
@@ -39,6 +38,8 @@ This repository is used to provide additional resources for `BDLC_FS25`.
 ├── install_hadoop_pseudo_distributed.md    # how to install Apache Hadoop in Pseudo Distributed Mode
 └── v02_exercises.md                        # exercises for this week
 ```
+
+<!--
 
 ## [V03](./V03/)
 
