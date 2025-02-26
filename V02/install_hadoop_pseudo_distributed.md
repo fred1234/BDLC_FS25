@@ -320,7 +320,7 @@ sudo apt install python-is-python3
 sudo apt install python3-pip
 ```
 
-Verify that we have `Python 3.10.12` activated by checking the version:
+Verify that we have `Python 3.13.2` activated by checking the version:
 
 ```bash
 python --version
