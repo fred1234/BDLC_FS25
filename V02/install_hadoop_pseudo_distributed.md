@@ -10,11 +10,21 @@ SSH into your machine with `ssh labstudent@bdlc-XXX.bdlc.ls.eee.intern`, where `
 
 ## Installing and Configuring Java 11
 
+```bash
+sudo apt update
+sudo apt upgrade
+```
+
 Unfortunately, Hadoop (YARN) requires [Java 11](https://cwiki.apache.org/confluence/display/HADOOP/Hadoop+Java+Versions).
 
 Install Java:
 
 - https://ralph.blog.imixs.com/2024/01/24/install-open-jdk-11-on-debian-12-bookworm/
+
+<!-- ```bash
+sudo apt-get install aptitude
+sudo aptitude install openjdk-11-jdk
+``` -->
 
 As we have different Java versions now, we have to pick the default one. Execute:
 
