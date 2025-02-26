@@ -8,6 +8,45 @@ We will use the official installation documentation from [Apache Hadoop](https:/
 
 SSH into your machine with `ssh labstudent@bdlc-XXX.bdlc.ls.eee.intern`, where `XX` is your personal virtual machine number.
 
+## Installing and Configuring Java 11
+
+Unfortunately, Hadoop (YARN) requires [Java 11](https://cwiki.apache.org/confluence/display/HADOOP/Hadoop+Java+Versions).
+
+Install Java:
+
+- https://ralph.blog.imixs.com/2024/01/24/install-open-jdk-11-on-debian-12-bookworm/
+
+As we have different Java versions now, we have to pick the default one. Execute:
+
+```bash
+sudo update-alternatives --config java
+```
+
+and choose the `/usr/lib/jvm/java-11-openjdk-amd64/bin/java` by providing the right number:
+
+```text
+There are 2 choices for the alternative java (providing /usr/bin/java).
+
+  Selection    Path                                         Priority   Status
+------------------------------------------------------------
+* 0            /usr/lib/jvm/java-17-openjdk-amd64/bin/java   1711      auto mode
+  1            /usr/lib/jvm/java-11-openjdk-amd64/bin/java   1111      manual mode
+  2            /usr/lib/jvm/java-17-openjdk-amd64/bin/java   1711      manual mode
+Press <enter> to keep the current choice[*], or type selection number: 1
+```
+
+The Java version should now be `11.0.26`:
+
+```bash
+java -version
+```
+
+```text
+openjdk 11.0.26 2025-01-21
+OpenJDK Runtime Environment (build 11.0.26+4-post-Debian-1)
+OpenJDK 64-Bit Server VM (build 11.0.26+4-post-Debian-1, mixed mode, sharing)
+```
+
 ## Create HDFS Folders
 
 As user `labstudent`, create the two folders in our `/data/` directory:
@@ -29,6 +68,31 @@ Switch to the user `hadoop`.
 
 ```bash
 su - hadoop
+```
+
+We need to specify `JAVA_HOME` in `~/hadoop/etc/hadoop/hadoop-env.sh`. To figure out where java's home is, run:
+
+```bash
+dirname $(dirname $(readlink -f $(which java)))
+```
+
+and copy the output (`/usr/lib/jvm/java-11-openjdk-amd64`).
+
+```text
+change the line from
+# export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+```
+
+to
+
+```text
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+```
+
+with
+
+```bash
+nano ~/hadoop/etc/hadoop/hadoop-env.sh
 ```
 
 Edit your bash profile in `~/.bashrc` and add these three lines at the end:
@@ -155,7 +219,7 @@ You can verify that hdfs is running by performing a `jps`:
 20733 Jps
 ```
 
-On your personal computer - you can access the `namenode` dashboard under http://bdlc-XX.labservices.ch:9870/
+On your personal computer - you can access the `namenode` dashboard under http://bdlc-XXX.bdlc.ls.eee.intern:9870/
 
 Create `hadoop`'s user folder in `hdfs`:
 
@@ -174,6 +238,10 @@ Replace the configuration part in `~/hadoop/etc/hadoop/mapred-site.xml` with:
                 <name>mapreduce.framework.name</name>
                 <value>yarn</value>
         </property>
+        <property>
+        <name>mapreduce.application.classpath</name>
+        <value>$HADOOP_MAPRED_HOME/share/hadoop/mapreduce/*:$HADOOP_MAPRED_HOME/share/hadoop/mapreduce/lib/*</value>
+    </property>
 </configuration>
 ```
 
@@ -221,7 +289,7 @@ DataNode
 Jps
 ```
 
-On your computer, you can access the `ResourceManager` under http://bdlc-XX.labservices.ch:8088/
+On your computer, you can access the `ResourceManager` under http://bdlc-XXX.bdlc.ls.eee.intern:8088/
 
 ## HistoryServer
 

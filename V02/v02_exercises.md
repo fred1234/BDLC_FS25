@@ -32,7 +32,7 @@ hdfs dfs -ls /dataset
 hdfs dfs -cat /dataset/holmes.txt
 ```
 
-> On your computer, check if you can find the files http://bdlc-XX.labservices.ch:9870/explorer.html#/
+> On your computer, check if you can find the files http://bdlc-XXX.bdlc.ls.eee.intern:9870/explorer.html#/
 
 Run a word count on the `holmes.txt` file:
 
@@ -41,7 +41,7 @@ Run a word count on the `holmes.txt` file:
 ```
 
 > Can you find the results on the web-interface _and_ via the console?
-> Look at the Map Reduce Job in http://bdlc-XX.labservices.ch:8088/cluster and try to go to the history of the word count job.
+> Look at the Map Reduce Job in http://bdlc-XXX.bdlc.ls.eee.intern:8088/cluster and try to go to the history of the word count job.
 
 Delete the test folder afterwards:
 
