@@ -39,8 +39,6 @@ This repository is used to provide additional resources for `BDLC_FS25`.
 └── v02_exercises.md                        # exercises for this week
 ```
 
-<!--
-
 ## [V03](./V03/)
 
 - Setup and Customize `JupyterLab`.
@@ -59,6 +57,8 @@ This repository is used to provide additional resources for `BDLC_FS25`.
 ├── v03_exercises_material              # exercise material
 └── v03_exercises.md                    # exercises for this week
 ```
+
+<!--
 
 ## [V04](./V04/)
 
