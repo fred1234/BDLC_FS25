@@ -7,7 +7,7 @@ In the example of the word count with the 10 gigs we saw two major drawbacks.
 
 ## Change Spilling Directory
 
-Create the new tmp directory as `student`:
+Create the new tmp directory as `labstudent`:
 
 ```bash
 sudo mkdir /data/tmp/
