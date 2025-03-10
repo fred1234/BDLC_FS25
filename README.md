@@ -58,8 +58,6 @@ This repository is used to provide additional resources for `BDLC_FS25`.
 └── v03_exercises.md                    # exercises for this week
 ```
 
-<!--
-
 ## [V04](./V04/)
 
 - Installation of MySQL
@@ -73,6 +71,7 @@ This repository is used to provide additional resources for `BDLC_FS25`.
 └── install_MySQL.md                    # Installation guide for mySQL and Python Magic.
 ```
 
+<!--
 ## [V05](./V05/)
 
 - Hive
