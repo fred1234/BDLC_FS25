@@ -7,8 +7,6 @@ sudo apt-get -y install mariadb-server
 For `JupyterLab` support:
 
 ```bash
-#sudo apt install -y libmysqlclient-dev
-#sudo apt install -y libsasl2-dev
 sudo apt install -y gcc
 sudo apt install -y openssl
 sudo apt install -y pkg-config
