@@ -9,8 +9,14 @@ For `JupyterLab` support:
 ```bash
 #sudo apt install -y libmysqlclient-dev
 #sudo apt install -y libsasl2-dev
+sudo apt install -y gcc
+sudo apt install -y openssl
 sudo apt install -y pkg-config
 ```
+
+### Create a Test_User in MySQL
+
+We will create an own test_user in the `MySQL` database:
 
 The user root has no password:
 
@@ -38,27 +44,6 @@ mysql>
 ```
 
 ```sql
-USE mysql;
-UPDATE user SET plugin='mysql_native_password' WHERE User='root';
-FLUSH PRIVILEGES;
-exit;
-```
-
-Restart the mysql service:
-
-```bash
-sudo service mysql restart
-```
-
-### Create a Test_User in MySQL
-
-We will create an own test_user in the `MySQL` database:
-
-```bash
-mysql -u root
-```
-
-```sql
 CREATE USER 'test_user'@'localhost' IDENTIFIED BY 'test_user' password expire never;
 GRANT ALL ON *.* TO 'test_user'@'localhost';
 exit;
@@ -75,8 +60,8 @@ mysql -u test_user -ptest_user
 We can run SQL directly in `JupyterLab`. Open a terminal in `Jupyterlab` and install:
 
 ```bash
-pip install SQLAlchemy==1.3.24
+pip install SQLAlchemy
 pip install pandas
-pip install mysqlclient
-pip install ipython-sql==0.4.1
+pip install PyMySQL
+pip install ipython-sql
 ```
