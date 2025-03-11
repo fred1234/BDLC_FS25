@@ -1,4 +1,4 @@
-# MySQL
+# MariaDB
 
 ```bash
 sudo apt-get -y install mariadb-server
@@ -12,9 +12,9 @@ sudo apt install -y openssl
 sudo apt install -y pkg-config
 ```
 
-### Create a Test_User in MySQL
+### Create a Test_User in MariaDB
 
-We will create an own test_user in the `MySQL` database:
+We will create an own test_user in the `MariaDB` database:
 
 The user root has no password:
 
@@ -26,18 +26,6 @@ Enter password: #just press enter
 You should see a new sql prompt.
 
 ```text
-Welcome to the MySQL monitor.  Commands end with ; or \g.
-Your MySQL connection id is 8
-Server version: 8.0.36-0ubuntu0.20.04.3 (Ubuntu)
-
-Copyright (c) 2000, 2022, Oracle and/or its affiliates.
-
-Oracle is a registered trademark of Oracle Corporation and/or its
-affiliates. Other names may be trademarks of their respective
-owners.
-
-Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
-
 mysql>
 ```
 
@@ -47,7 +35,7 @@ GRANT ALL ON *.* TO 'test_user'@'localhost';
 exit;
 ```
 
-We can set the password of test_user with the first login:
+We can set the password of `test_user` with the first login:
 
 ```bash
 mysql -u test_user -ptest_user
