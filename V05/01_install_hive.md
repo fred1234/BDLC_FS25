@@ -16,6 +16,40 @@ wget https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-j_9.2.0-1de
 sudo apt install -y ./mysql-connector-j_9.2.0-1debian12_all.deb
 ```
 
+### Create User Hive in MySQL
+
+We will create an own hive user in the `MySQL` database. Still as user `hadoop`:
+
+```bash
+sudo mysql -u root
+```
+
+```sql
+CREATE USER 'hive'@'localhost' IDENTIFIED BY 'hive' password expire never;
+GRANT ALL ON *.* TO 'hive'@'localhost';
+exit;
+```
+
+We can set the password of hive with the first login:
+
+```bash
+mysql -u hive -phive
+```
+
+Let's create a new database for the `hive_metastore`:
+
+```sql
+create database hive_metastore;
+show databases;
+exit;
+```
+
+Our credentials and meta_store informations are therefore:
+
+- user: `hive`
+- password: `hive`
+- database: `hive_metastore`
+
 ## Stopping all Hadoop Services
 
 Change to user `hadoop` (`su - hadoop`) and stop all Hadoop services:
@@ -104,40 +138,6 @@ Please, do not forget to set the following configuration properties in hive-site
 hive.metastore.warehouse.dir=/user/hive/warehouse
 hive.exec.scratchdir=/tmp
 ```
-
-### Create User Hive in MySQL
-
-We will create an own hive user in the `MySQL` database. Still as user `hadoop`:
-
-```bash
-sudo mysql -u root
-```
-
-```sql
-CREATE USER 'hive'@'localhost' IDENTIFIED BY 'hive' password expire never;
-GRANT ALL ON *.* TO 'hive'@'localhost';
-exit;
-```
-
-We can set the password of hive with the first login:
-
-```bash
-mysql -u hive -phive
-```
-
-Let's create a new database for the `hive_metastore`:
-
-```sql
-create database hive_metastore;
-show databases;
-exit;
-```
-
-Our credentials and meta_store informations are therefore:
-
-- user: `hive`
-- password: `hive`
-- database: `hive_metastore`
 
 ## MYSQL Connector
 
