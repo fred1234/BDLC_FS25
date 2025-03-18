@@ -272,7 +272,6 @@ We can run SQL directly in `JupyterLab`. Open a terminal in `Jupyterlab` and ins
 
 ```bash
 pip install pyhive
-pip install pyhive[hive]
 ```
 
 <!-- TODO - link to FORUM
