@@ -18,7 +18,7 @@ sudo apt install -y ./mysql-connector-j_9.2.0-1debian12_all.deb
 
 ### Create User Hive in MySQL
 
-We will create an own hive user in the `MySQL` database. Still as user `hadoop`:
+We will create an own hive user in the `MySQL` database. Still as user `labstudent`:
 
 ```bash
 sudo mysql -u root
