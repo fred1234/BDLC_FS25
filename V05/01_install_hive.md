@@ -272,6 +272,8 @@ We can run SQL directly in `JupyterLab`. Open a terminal in `Jupyterlab` and ins
 
 ```bash
 pip install pyhive
+pip install thrift
+pip install thrift_sasl
 ```
 
 <!-- TODO - link to FORUM
@@ -315,29 +317,6 @@ jdbc:hive2://localhost:10000> show DATABASES;
 | default        |
 +----------------+
 ```
-
-<!-- ### SQL Extensions
-
-As `hadoop`, stop `JupyterLab`:
-
-```bash
-ps -ef | grep jupyter
-# followed by the kill pid command
-```
-
-Install the following extension and build it:
-
-```bash
-pip install jupyterlab_sql
-jupyter serverextension enable jupyterlab_sql
-jupyter lab build
-```
-
-Start `JupyterLab` again with
-
-```bash
-nohup jupyter lab > error.log &
-``` -->
 
 ## Creating a Database / a Table and Inserting Data
 
