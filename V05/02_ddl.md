@@ -30,7 +30,7 @@ Let us insert some data:
 INSERT INTO test_table (id, value) VALUES (1,'ABC'), (2,'DEF');
 ```
 
-This triggers a MapReduce job. Check it out in YARN http://bdlc-XX.labservices.ch:8088/cluster
+This triggers a MapReduce job. Check it out in YARN http://bdlc-XXX.bdlc.ls.eee.intern:8088/cluster
 
 ```sql
 SELECT * FROM test_table;
