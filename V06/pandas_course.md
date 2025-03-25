@@ -82,7 +82,7 @@ All the files are saved automatically for you. However, there are a few steps (a
 
 12. Install the necessary python libraries with `pip3 install -r requirements.txt`.
 13. Start the workshop with `jupyter lab`.
-14. As long as the shell is open, you can access [http://bdlc-XXX.bdlc.ls.eee.intern:8888/lab](http://bdlc-XXX.bdlc.ls.eee.intern:8888/lab/tree/notebooks/0-check_your_env.ipynb).
+14. As long as the shell is open, you can access [http://bdlc-XXX.bdlc.ls.eee.intern:8888/lab/tree/notebooks/0-check_your_env.ipynb](http://bdlc-XXX.bdlc.ls.eee.intern:8888/lab/tree/notebooks/0-check_your_env.ipynb).
     1. Use your `jupyterlab` password.
     2. You can dismiss the warnings: `jupyterlab-git server extension`.
 
