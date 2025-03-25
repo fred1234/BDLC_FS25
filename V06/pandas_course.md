@@ -34,7 +34,7 @@ All the files are saved automatically for you. However, there are a few steps (a
 
 ### Setup the Course on your Cluster
 
-1. SSH into your machine with `ssh student@bdlc-XX.labservices.ch`, where `XX` is your personal virtual machine number.
+1. SSH into your machine with `ssh labstudent@bdlc-XXX.bdlc.ls.eee.intern`, where `XXX` is your personal virtual machine number.
 <!-- 2. Install the virtual environment package for python: `sudo apt install -y python3-venv` -->
 2. Switch to user hadoop: `su - hadoop`
 3. Stop "your" JupyterLab instance:
@@ -55,7 +55,7 @@ All the files are saved automatically for you. However, there are a few steps (a
    kill 152556
    ```
 
-4. http://bdlc-XX.labservices.ch:8888/lab?, where `XX` is your personal virtual machine number, should no longer be reachable.
+4. http://bdlc-XXX.bdlc.ls.eee.intern:8888/lab?, where `XX` is your personal virtual machine number, should no longer be reachable.
 5. In the ssh session, create a new folder for the workshop. `mkdir ~/pandas-workshop`.
 6. Change directory to the folder `cd ~/pandas-workshop`
 7. Clone the pandas workshop from git: `git clone https://github.com/stefmolin/pandas-workshop.git`
@@ -78,7 +78,7 @@ All the files are saved automatically for you. However, there are a few steps (a
 
 11. Install the necessary python libraries with `pip3 install -r requirements.txt`.
 12. Start the workshop with `jupyter lab`.
-13. As long as the shell is open, you can access [http://bdlc-XX.labservices.ch:8888/lab](http://bdlc-XX.labservices.ch:8888/lab).
+13. As long as the shell is open, you can access [http://bdlc-XXX.bdlc.ls.eee.intern:8888/lab](http://bdlc-XXX.bdlc.ls.eee.intern:8888/lab).
     1. Use your `jupyterlab` password.
     2. You can dismiss the warnings: `jupyterlab-git server extension`.
 
