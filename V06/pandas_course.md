@@ -41,8 +41,7 @@ All the files are saved automatically for you. However, there are a few steps (a
    The easiest way is to use the GUI:
    ![image](https://github.com/user-attachments/assets/6c3d28d2-b56b-485b-a4d1-147f52ae738b)
 
-   You can also do this onb the console:
-   
+   You can also do this directly on the CLI:
 
    ```bash
    ps -ef | grep jupyter-lab
@@ -60,13 +59,13 @@ All the files are saved automatically for you. However, there are a few steps (a
    kill 152556
    ```
 
-6. http://bdlc-XXX.bdlc.ls.eee.intern:8888/lab?, where `XX` is your personal virtual machine number, should no longer be reachable.
-7. In the ssh session, create a new folder for the workshop. `mkdir ~/pandas-workshop`.
-8. Change directory to the folder `cd ~/pandas-workshop`
-9. Clone the pandas workshop from git: `git clone https://github.com/stefmolin/pandas-workshop.git`
-10. Create a virtual enviornment (venv) for the workshop with `python3 -m venv pandas_workshop_venv`.
-11. Activate the venv `source pandas_workshop_venv/bin/activate`.
-   1. The prompt of your shell should change from e.g.: `(venv) hadoop@bdlc-20:~/pandas-workshop$` to: `(pandas_workshop_venv) hadoop@bdlc-20:~/pandas-workshop$`
+4. http://bdlc-XXX.bdlc.ls.eee.intern:8888/lab?, where `XX` is your personal virtual machine number, should no longer be reachable.
+5. In the ssh session, create a new folder for the workshop. `mkdir ~/pandas-workshop`.
+6. Change directory to the folder `cd ~/pandas-workshop`
+7. Clone the pandas workshop from git: `git clone https://github.com/stefmolin/pandas-workshop.git`
+8. Create a virtual enviornment (venv) for the workshop with `python3 -m venv pandas_workshop_venv`.
+9. Activate the venv `source pandas_workshop_venv/bin/activate`.
+10. The prompt of your shell should change from e.g.: `(venv) hadoop@bdlc-20:~/pandas-workshop$` to: `(pandas_workshop_venv) hadoop@bdlc-20:~/pandas-workshop$`
 11. Change to the workshop-folder:
 
     ```bash
@@ -76,14 +75,14 @@ All the files are saved automatically for you. However, there are a few steps (a
     e.g.
 
     ```bash
-    (pandas_workshop_venv) hadoop@bdlc-19:~/pandas-workshop$ cd pandas-workshop/
-    (pandas_workshop_venv) hadoop@bdlc-20:~/pandas-workshop/pandas-workshop$ pwd
+    (pandas_workshop_venv) hadoop@bdlc-019:~/pandas-workshop$ cd pandas-workshop/
+    (pandas_workshop_venv) hadoop@bdlc-019:~/pandas-workshop/pandas-workshop$ pwd
     /home/hadoop/pandas-workshop/pandas-workshop
     ```
 
 12. Install the necessary python libraries with `pip3 install -r requirements.txt`.
 13. Start the workshop with `jupyter lab`.
-14. As long as the shell is open, you can access [http://bdlc-XXX.bdlc.ls.eee.intern:8888/lab](http://bdlc-XXX.bdlc.ls.eee.intern:8888/lab).
+14. As long as the shell is open, you can access [http://bdlc-XXX.bdlc.ls.eee.intern:8888/lab](http://bdlc-XXX.bdlc.ls.eee.intern:8888/lab/tree/notebooks/0-check_your_env.ipynb).
     1. Use your `jupyterlab` password.
     2. You can dismiss the warnings: `jupyterlab-git server extension`.
 
