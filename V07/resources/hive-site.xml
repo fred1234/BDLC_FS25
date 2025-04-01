@@ -427,12 +427,12 @@
   </property>
   <property>
     <name>hive.exec.local.scratchdir</name>
-    <value>${system:java.io.tmpdir}/${system:user.name}</value>
+    <value>/tmp/${user.name}</value>
     <description>Local scratch space for Hive jobs</description>
   </property>
   <property>
     <name>hive.downloaded.resources.dir</name>
-    <value>${system:java.io.tmpdir}/${hive.session.id}_resources</value>
+    <value>/tmp/${user.name}_resources</value>
     <description>Temporary local directory for added resources in the remote file system.</description>
   </property>
   <property>
@@ -1294,7 +1294,7 @@
   </property>
   <property>
     <name>hive.metastore.event.db.notification.api.auth</name>
-    <value>true</value>
+    <value>false</value>
     <description>
       Should metastore do authorization against database notification related APIs such as get_next_notification.
       If set to true, then only the superusers in proxy settings have the permission
