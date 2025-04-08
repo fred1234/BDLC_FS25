@@ -6,7 +6,7 @@ As `hadoop`, download, extract and rename the newest Spark binaries:
 
 ```bash
 cd ~
-wget https://www.apache.org/dyn/closer.lua/spark/spark-3.5.5/spark-3.5.5-bin-hadoop3.tgz
+wget https://dlcdn.apache.org/spark/spark-3.5.5/spark-3.5.5-bin-hadoop3.tgz
 tar xvf spark-3.5.5-bin-hadoop3.tgz
 mv spark-3.5.5-bin-hadoop3 spark
 ```
