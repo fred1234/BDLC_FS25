@@ -112,7 +112,6 @@ This repository is used to provide additional resources for `BDLC_FS25`.
 ├── v06_exercises_material           # Exercises for this week
 ```
 
-<!--
 ## [V08](./V08/)
 
 - Intro to Spark.
@@ -145,6 +144,7 @@ This repository is used to provide additional resources for `BDLC_FS25`.
 ├── 04_unix.stackexchange.com.ipynb         # DFs and the unix.stackexchange.com dataset (incl. some questions at the end)
 ```
 
+<!--
 ## [V10](./V10/)
 
 Fokus: Projektarbeit
