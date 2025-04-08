@@ -119,9 +119,9 @@ HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
 LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HADOOP_HOME/lib/native
 SPARK_CLASSPATH=$HIVE_HOME/lib/mysql-connector-java.jar
 
-SPARK_LOCAL_HOSTNAME=$HOSTNAME.labservices.ch
-SPARK_IDENT_STRING=$HOSTNAME.labservices.ch
-SPARK_PUBLIC_DNS=$HOSTNAME.labservices.ch
+SPARK_LOCAL_HOSTNAME=$HOSTNAME.bdlc.ls.eee.intern
+SPARK_IDENT_STRING=$HOSTNAME.bdlc.ls.eee.intern
+SPARK_PUBLIC_DNS=$HOSTNAME.bdlc.ls.eee.intern
 ```
 
 ```bash
@@ -220,15 +220,15 @@ Let us test if the Spark installation works in the CLI.
 
 Check out:
 
-- The [Resource Manager](http://bdlc-XX.labservices.ch:8088/cluster)
-- The [Spark History Server](http://bdlc-XX.labservices.ch:18080/)
+- The [Resource Manager](http://bdlc-XXX.bdlc.ls.eee.intern:8088/cluster)
+- The [Spark History Server](http://bdlc-XXX.bdlc.ls.eee.intern:18080/)
 
 When you perform these tasks.
 
 ### Pi with spark-submit
 
 ```bash
-spark-submit --deploy-mode client --class org.apache.spark.examples.SparkPi /home/hadoop/spark/examples/jars/spark-examples_2.12-3.5.1.jar 10
+spark-submit --deploy-mode client --class org.apache.spark.examples.SparkPi /home/hadoop/spark/examples/jars/spark-examples_2.12-3.5.5.jar 10
 ```
 
 ### Pyspark - Interactive Shell
