@@ -190,22 +190,6 @@ word_count.take(5)
 
 Exit with `exit()`.
 
-### SPARK-SQL
-
-```bash
-spark-sql
-```
-
-```sql
-SHOW DATABASES;
-
-USE movielens_parquet;
-
-select avg(rating) from ratings where movieid = 1;
-```
-
-Exit with `exit;`.
-
 ## References
 
 - https://spark.apache.org
