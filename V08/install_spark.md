@@ -33,20 +33,6 @@ Source `~/.bashrc` to load the configuration we just made:
 source ~/.bashrc
 ```
 
-## `HDFS` Setup
-
-Let us create a spark directory in `hdfs` and add the necessary jars to it.
-
-```bash
-cd ~
-jar cv0f spark-libs.jar -C $SPARK_HOME/jars/ .
-```
-
-```bash
-hdfs dfs -mkdir -p /user/spark/spark-logs
-hdfs dfs -put spark-libs.jar /user/spark/spark-libs.jar
-```
-
 ## spark-defaults.conf
 
 We can adjust the default behavior for Spark with `spark-defaults.conf`
@@ -65,26 +51,15 @@ Let's add the following block to the **end** of `spark-defaults.conf`:
 spark.master yarn
 
 spark.eventLog.enabled true
-spark.eventLog.dir hdfs://127.0.0.1:9000/user/spark/spark-logs
-spark.history.provider org.apache.spark.deploy.history.FsHistoryProvider
-spark.history.fs.logDirectory hdfs://127.0.0.1:9000/user/spark/spark-logs
-spark.history.fs.update.interval 10s
 spark.history.ui.port 18080
 
-spark.sql.warehouse.dir /user/hive/warehouse
-
-spark.yarn.archive hdfs://127.0.0.1:9000/user/spark/spark-libs.jar
-
-#spark.driver.memory     3g
 spark.yarn.am.memory 3g
 spark.executor.memory 2g
 
 spark.executor.instances 6
 spark.executor.cores 3
 
-#spark.driver.cores 2
 spark.yarn.am.cores 2
-
 ```
 
 ```bash
@@ -162,53 +137,12 @@ by using `nano`:
 nano log4j2.properties
 ```
 
-## Hive
-
-We need to make some changes for Hive support. This will be needed in the next weeks.
-
-```bash
-cd ~/spark/conf/
-```
-
-Create a new file called `hive-site.xml`:
-
-```bash
-touch hive-site.xml
-```
-
-And add the following information:
-
-```xml
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
-<configuration>
-  <property>
-  <name>hive.metastore.uris</name>
-    <!-- hostname must point to the Hive metastore URI in your cluster -->
-    <value>thrift://127.0.0.1:9083</value>
-    <description>URI for client to contact metastore server</description>
-  </property>
-</configuration>
-```
-
-```bash
-nano hive-site.xml
-```
-
-We also need the hdfs config files:
-
-```bash
-cp $HADOOP_HOME/etc/hadoop/core-site.xml $SPARK_HOME/conf/
-cp $HADOOP_HOME/etc/hadoop/hdfs-site.xml $SPARK_HOME/conf/
-```
-
 ## History Server
 
 In order to keep all logs from Spark, we will start the `history server` with:
 
-<!-- TODO source hat nicht gereicht für path -->
-
 ```bash
+mkdir /tmp/spark-events
 start-history-server.sh
 ```
 
