@@ -2,8 +2,8 @@
 
 ## Deadlines
 
-- Sie bilden 4er bis 5er Teams. Eine Person vom Team soll mir bis am 02.05.2023 melden, welche Personen im Team sind.
-- Upload des Projektes nach ILIAS bis: Mo 03.06.2023 23:54:59.999 (MESZ)
+- Sie bilden 3er bis 5er Teams. Eine Person vom Team soll mir bis am 24.04.2025 melden, welche Personen im Team sind.
+- Upload des Projektes nach ILIAS bis: So 01.06.2025 23:54:59.999 (MESZ)
 
 ## Sprache
 
@@ -67,7 +67,7 @@ zu benutzen.
 ## Punkte
 
 | Thema       | Max Punkte |
-|-------------|------------|
+| ----------- | ---------- |
 | Abstract    | 2          |
 | Cluster     | 4          |
 | Dataset     | 4          |
@@ -78,7 +78,7 @@ zu benutzen.
 
 ## Vorgehen
 
-- Bilden Sie 4er oder 5er Teams. Eine Person meldet mir bis am 02.05.2023 alle Teammitglieder.
+- Bilden Sie 3er oder 5er Teams. Eine Person meldet mir bis am 24.04.2025 alle Teammitglieder.
 - Suchen Sie nach einem geeigneten Dataset. Fragen Sie mich bei Bedarf.
   - [Dataset](./dataset_ideas.md)
 - Denken Sie sich interessante Fragen (mindestens zwei) aus, welche der Datensatz beantworten könnte. Auch hier: melden Sie sich bei Fragen oder wenn Sie Unterstützung brauchen.
