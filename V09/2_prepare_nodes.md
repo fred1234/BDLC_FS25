@@ -1,6 +1,6 @@
 # Setup on all Nodes
 
-# Important
+<!-- # Important
 
 We need to modify the `/etc/hosts` file.
 
@@ -113,9 +113,7 @@ ping bdlc-16
 PING bdlc-16.labservices.ch (10.164.150.116) 56(84) bytes of data.
 64 bytes from 10.164.150.116 (10.164.150.116): icmp_seq=1 ttl=64 time=1.24 ms
 ^C # stop it with ctrl+c
-```
-
-
+``` -->
 
 ## User
 
@@ -141,6 +139,7 @@ sudo chown cluster:root -R /data/hdfscluster/
 ```
 
 ## TMP Directory for Spark
+
 ```bash
 sudo mkdir /data/tmpcluster
 sudo chown cluster:root -R /data/tmpcluster/
@@ -169,14 +168,14 @@ Download Hadoop and Spark, extract it and rename.
 cd ~
 
 echo "Hadoop"
-wget https://dlcdn.apache.org/hadoop/common/hadoop-3.3.6/hadoop-3.3.6.tar.gz
-tar -xvzf hadoop-3.3.6.tar.gz
-mv hadoop-3.3.6 hadoop
+wget https://dlcdn.apache.org/hadoop/common/hadoop-3.4.1/hadoop-3.4.1.tar.gz
+tar -xvzf hadoop-3.4.1.tar.gz
+mv hadoop-3.4.1 hadoop
 
 
 echo "Spark"
-wget https://dlcdn.apache.org/spark/spark-3.5.1/spark-3.5.1-bin-hadoop3.tgz
-tar xvf spark-3.5.1-bin-hadoop3.tgz
-mv spark-3.5.1-bin-hadoop3 spark
+wget https://dlcdn.apache.org/spark/spark-3.5.5/spark-3.5.5-bin-hadoop3.tgz
+tar xvf spark-3.5.5-bin-hadoop3.tgz
+mv spark-3.5.5-bin-hadoop3 spark
 
 ```
