@@ -84,8 +84,8 @@ Make sure to check the `Allow write access` option.
 
 ```bash
 cd ~
-git clone git@github.com:fred1234/BDLC_FS24_Project_Template.git
-cd BDLC_FS24_Project_Template/
+git clone git@github.com:fred1234/BDLC_FS25_Project_Template.git
+cd BDLC_FS25_Project_Template/
 ```
 
 ```bash
@@ -96,14 +96,14 @@ git config  user.name "Cluster User"
 Try to create a new file and see if `commit`/`push` works.
 
 ```bash
-cluster@bdlc-19:~/BDLC_FS24_Project_Template$ echo "19" >  19_file
-cluster@bdlc-19:~/BDLC_FS24_Project_Template$ git add 19_file
-cluster@bdlc-19:~/BDLC_FS24_Project_Template$ git commit -m "adding a 19file"
+cluster@bdlc-19:~/BDLC_FS25_Project_Template$ echo "19" >  19_file
+cluster@bdlc-19:~/BDLC_FS25_Project_Template$ git add 19_file
+cluster@bdlc-19:~/BDLC_FS25_Project_Template$ git commit -m "adding a 19file"
 [main dc4d0f8] adding a 19file
  1 file changed, 1 insertion(+)
  create mode 100644 19_file
 
-cluster@bdlc-19:~/BDLC_FS24_Project_Template$ git push
+cluster@bdlc-19:~/BDLC_FS25_Project_Template$ git push
 Enumerating objects: 4, done.
 Counting objects: 100% (4/4), done.
 Delta compression using up to 20 threads
@@ -111,9 +111,9 @@ Compressing objects: 100% (2/2), done.
 Writing objects: 100% (3/3), 269 bytes | 269.00 KiB/s, done.
 Total 3 (delta 1), reused 0 (delta 0)
 remote: Resolving deltas: 100% (1/1), completed with 1 local object.
-To github.com:fred1234/BDLC_FS24_Project_Template.git
+To github.com:fred1234/BDLC_FS25_Project_Template.git
    24d86e2..dc4d0f8  main -> main
-cluster@bdlc-19:~/BDLC_FS24_Project_Template$
+cluster@bdlc-19:~/BDLC_FS25_Project_Template$
 ```
 
 ## HDFS and Hadoop
@@ -140,7 +140,7 @@ change the line from
 to
 
 ```text
-export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 ```
 
 with
@@ -380,7 +380,7 @@ Go to http://bdlc-002.bdlc.ls.eee.intern:8080/ and verify that we have the assig
 Check that the command
 
 ```bash
-spark-submit --deploy-mode client --class org.apache.spark.examples.SparkPi /home/cluster/spark/examples/jars/spark-examples_2.12-3.5.1.jar 10
+spark-submit --deploy-mode client --class org.apache.spark.examples.SparkPi /home/cluster/spark/examples/jars/spark-examples_2.12-3.5.5.jar 10
 ```
 
 Does not return a failure.
@@ -411,22 +411,18 @@ source ~/.bashrc
 ```
 
 ```bash
-pip install markupsafe==2.0.1
 pip install jupyterlab
-pip install jupyterlab-git
-pip install SQLAlchemy==1.3.24
+pip install --upgrade jupyterlab-git
+pip install SQLAlchemy
 pip install pandas
+pip install PyMySQL
 pip install ipython-sql
 pip install pyarrow
 pip install findspark
+pip install pyspark
 pip install sparksql-magic
 pip install wordcloud
 ```
-
-<!-- ```bash
-wget https://raw.githubusercontent.com/fred1234/BDLC_FS24/main/V10/freeze.txt
-pip install freeze.txt
-``` -->
 
 ### JupyterLab
 
@@ -477,7 +473,7 @@ Start the service with:
 jupyter lab
 ```
 
-And test the service in your web-browser with the url `http://bdlc-XX.bdlc.ls.eee.intern:8888/lab`
+And test the service in your web-browser with the url `http://bdlc-XXX.bdlc.ls.eee.intern:8888/lab`
 
 close the running service (`ctrl-c twice`) and start jupyter as a service
 
@@ -485,7 +481,7 @@ close the running service (`ctrl-c twice`) and start jupyter as a service
 nohup jupyter lab > jupyter.log &
 ```
 
-The service should still be accessible via `http://bdlc-XX.bdlc.ls.eee.intern:8888/lab`.
+The service should still be accessible via `http://bdlc-XXX.bdlc.ls.eee.intern:8888/lab`.
 
 # Services Overview
 

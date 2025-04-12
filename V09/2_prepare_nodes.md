@@ -115,6 +115,40 @@ PING bdlc-16.labservices.ch (10.164.150.116) 56(84) bytes of data.
 ^C # stop it with ctrl+c
 ``` -->
 
+## JAVA Version
+
+As we just use Spark, we can go to a newer Java versions now. We have to pick the default one. Execute:
+
+```bash
+sudo update-alternatives --config java
+```
+
+and choose the `/usr/lib/jvm/java-17-openjdk-amd64/bin/java` by providing the right number:
+
+```text
+There are 2 choices for the alternative java (providing /usr/bin/java).
+
+  Selection    Path                                         Priority   Status
+------------------------------------------------------------
+  0            /usr/lib/jvm/java-17-openjdk-amd64/bin/java   1711      auto mode
+* 1            /usr/lib/jvm/java-11-openjdk-amd64/bin/java   1111      manual mode
+  2            /usr/lib/jvm/java-17-openjdk-amd64/bin/java   1711      manual mode
+
+Press <enter> to keep the current choice[*], or type selection number: 0
+```
+
+The Java version should now be `17.0.14`:
+
+```bash
+java -version
+```
+
+```text
+openjdk 17.0.14 2025-01-21
+OpenJDK Runtime Environment (build 17.0.14+7-Debian-1deb12u1)
+OpenJDK 64-Bit Server VM (build 17.0.14+7-Debian-1deb12u1, mixed mode, sharing)
+```
+
 ## User
 
 We are going to create a new user for the cluster setup. This user will be used for your project work.
