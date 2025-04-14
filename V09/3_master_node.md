@@ -234,6 +234,12 @@ Format the namenode.
 hdfs namenode -format
 ```
 
+And leaving the safemode.
+
+```bash
+hdfs dfsadmin -safemode leave
+```
+
 ### Starting HDFS and Checks
 
 ```bash
