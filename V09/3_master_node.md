@@ -234,18 +234,17 @@ Format the namenode.
 hdfs namenode -format
 ```
 
-````
-
 ### Starting HDFS and Checks
 
 ```bash
 start-dfs.sh
-````
+```
 
 And leaving the safemode.
 
-````bash
+```bash
 hdfs dfsadmin -safemode leave
+```
 
 Go to http://bdlc-002.bdlc.ls.eee.intern:9870/ and verify that we have all nodes in the cluster.
 
@@ -253,7 +252,7 @@ Check that the command
 
 ```bash
 hdfs dfs -ls /
-````
+```
 
 Does not return a failure.
 
