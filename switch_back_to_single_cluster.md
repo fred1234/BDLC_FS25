@@ -80,7 +80,7 @@ Wait a minute...
 
 The services should be up and running again
 
-- http://bdlc-XX.labservices.ch:9870/dfshealth.html#tab-overview
-- http://bdlc-XX.labservices.ch:18080/
-- http://bdlc-XX.labservices.ch:10002/
-- http://bdlc-XX.labservices.ch:8888/lab?
+- http://bdlc-XXX.bdlc.ls.eee.intern:9870/dfshealth.html#tab-overview
+- http://bdlc-XXX.bdlc.ls.eee.intern:18080/
+- http://bdlc-XXX.bdlc.ls.eee.intern:10002/
+- http://bdlc-XXX.bdlc.ls.eee.intern:8888/lab?
